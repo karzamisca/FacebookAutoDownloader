@@ -1,6 +1,5 @@
 # Warning: USE BURNER ACCOUNT ONLY, USE MAIN ACCOUNT AT YOUR OWN RISK 
 # Compilation command: pyinstaller -D main.py
----
 
 # Facebook Auto-Poster
 
