@@ -1,5 +1,4 @@
 # Warning: USE BURNER ACCOUNT ONLY, USE MAIN ACCOUNT AT YOUR OWN RISK 
-# Compilation command: pyinstaller -D main.py
 
 # Facebook Auto-Poster
 
@@ -53,6 +52,13 @@ The main application class that creates the user interface and handles interacti
 
 5. **Start Posting**:
    - Click on "Start Posting" to begin the posting process.
+
+6. (Optional) **Compilation**:
+   - Use
+   ```bash 
+   pyinstaller -D main.py
+   ``` 
+   in the directory
 
 ## Notes
 - Ensure that the text files in the selected folder have the `.txt` extension.
