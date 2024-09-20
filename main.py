@@ -24,17 +24,14 @@ async def main():
         await page.goto('https://www.facebook.com')
 
         # Click on the "What's on your mind" button
-        await page.click('div[role="button"] span:has-text("What\'s on your mind, Quân?")')
+        await page.click('div[role="button"]:has-text("What\'s on your mind")')
 
         # Click on the contenteditable textbox
-        await page.click('div[aria-label="What\'s on your mind, Quân?"]')
+        await page.click('div[aria-label^="What\'s on your mind"]')
 
         # Input post text
-        post_text = "I am the best!"
+        post_text = "I am the best ver2!"
         await page.keyboard.type(post_text)
-
-        # Click "Next" button
-        await page.click('div[aria-label="Next"] span:has-text("Next")')
 
         # Click the "Post" button
         await page.click('div[aria-label="Post"] span:has-text("Post")')
