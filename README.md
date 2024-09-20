@@ -54,11 +54,11 @@ The main application class that creates the user interface and handles interacti
    - Click on "Start Posting" to begin the posting process.
 
 6. (Optional) **Compilation**:
-   - Use
+   - Use in the directory
    ```bash 
    pyinstaller -D main.py
    ``` 
-   in the directory
+   
 
 ## Notes
 - Ensure that the text files in the selected folder have the `.txt` extension.
