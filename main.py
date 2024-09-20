@@ -1,6 +1,10 @@
 import asyncio
 from playwright.async_api import async_playwright
 
+# Replace these with your actual Facebook credentials
+EMAIL = "your_email_or_phone"
+PASSWORD = "your_password"
+
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(
@@ -19,10 +23,21 @@ async def main():
         # Set the default timeout to 100000 milliseconds
         context.set_default_timeout(100000)
 
-        # Open a new page and navigate to Facebook
+        # Open a new page and navigate to Facebook login
         page = await context.new_page()
         await page.goto('https://www.facebook.com')
 
+        # Fill in the login form
+        await page.fill('input[name="email"]', EMAIL)  # Email or phone number field
+        await page.fill('input[name="pass"]', PASSWORD)  # Password field
+
+        # Click the login button
+        await page.click('button[name="login"]')
+
+        # Wait for page navigation after login (use `wait_for_url` or `wait_for_load_state`)
+        await page.wait_for_load_state('networkidle')  # Wait for the page to finish loading
+
+        # Now proceed with your post functionality
         # Click on the "What's on your mind" button
         await page.click('div[role="button"]:has-text("What\'s on your mind")')
 
