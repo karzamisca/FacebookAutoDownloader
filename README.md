@@ -40,7 +40,7 @@ The main application class that creates the user interface and handles interacti
 2. **Run the Application**:
    Execute the script to launch the UI:
    ```bash
-   python your_script_name.py
+   python main.py
    ```
 
 3. **Fill in Credentials**:
